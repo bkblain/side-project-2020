@@ -11,7 +11,9 @@ useful links
 3. Put raspberry pi hardware together
 4. Install and setup OS
 5. Enable SSH via ``sudo raspi-config``
-
+6. Install rtl-sdr
+7. install sox
+8. ``sudo rtl_fm -g 50 -f 89.5M -M wbfm -s 256k | play -r 32k -es -t raw -b 16 -c 1 -| omxplayer -o hdmi -p``
 
 TODO:
 - static IP?
