@@ -42,4 +42,27 @@ sudo update-rc.d dphys-swapfile remove
 
 ``sudo systemctl disable dphys-swapfile``
 
+add a role to the new node
+``sudo k3s kubectl label node raspberrypi node-role.kubernetes.io/node=""``
+
+delete a label
+``sudo k3s kubectl label node raspberrypi node-role.kubernetes.io/node-``
+
+show node labels
+``sudo k3s kubectl get nodes --show-labels``
+
+### nginx test
+
+http://192.168.1.2:30124/
+
+use nginx-test.yml
+
+deploy pod
+``sudo k3s kubectl apply -f nginx-test.yml``
+
+delete pod
+``sudo k3s kubectl delete -f nginx-test.yml``
+
+get all pods on all nodes
+``kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces``
 
