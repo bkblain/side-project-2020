@@ -20,7 +20,7 @@ TODO:
 - TeamViewer for screen sharing
 
 
-# Advanced
+## Advanced
 
 Using k3s
 
@@ -29,3 +29,10 @@ show the nodes
 
 taint the master node
 ``sudo k3s kubectl taint nodes brian-zenbook key=value:NoSchedule``
+
+remove swap to increase k8s performance
+```
+sudo dphys-swapfile swapoff && \
+sudo dphys-swapfile uninstall && \
+sudo update-rc.d dphys-swapfile remove
+```
