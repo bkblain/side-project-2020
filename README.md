@@ -24,6 +24,9 @@ TODO:
 
 Using k3s
 
+- https://github.com/teamserverless/k8s-on-raspbian/blob/master/GUIDE.md
+- https://medium.com/parkbee/life-on-the-edge-a-first-look-at-ranchers-lightweight-kubernetes-distro-k3s-15a3aab1f0fb
+
 show the nodes
 ``sudo k3s kubectl get node``
 
@@ -36,3 +39,7 @@ sudo dphys-swapfile swapoff && \
 sudo dphys-swapfile uninstall && \
 sudo update-rc.d dphys-swapfile remove
 ```
+
+``sudo systemctl disable dphys-swapfile``
+
+
