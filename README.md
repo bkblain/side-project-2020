@@ -18,3 +18,14 @@ useful links
 TODO:
 - static IP?
 - TeamViewer for screen sharing
+
+
+# Advanced
+
+Using k3s
+
+show the nodes
+``sudo k3s kubectl get node``
+
+taint the master node
+``sudo k3s kubectl taint nodes brian-zenbook key=value:NoSchedule``
