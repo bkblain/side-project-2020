@@ -71,5 +71,13 @@ get all pods on all nodes
 
 http://www.guoyiang.com/2016/11/04/Build-My-Own-Raspbian-Docker-Image/
 
-``sudo losetup -Pr \`losetup -f\` <file>``
+``losetup -f`` will find the next unused loop device location
+
+``sudo losetup -Pr `losetup -f` <file>``
+
+``losetup --list`` to list all devices
+
+
+This will create a tar that doesn't have a '.' directory in the beginning.
+``sudo find /mnt/rpi/ -printf "%P\n" | sudo tar -C /mnt/rpi -czpf ~/Downloads/2020-02-13-raspbian-buster-lite.tar.gz --numeric-owner --no-recursion -T -``
 
