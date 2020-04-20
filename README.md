@@ -67,6 +67,11 @@ get all pods on all nodes
 ``kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces``
 
 
+### docker
+
+Add the current user to the docker group to avoid needing sudo to run the docker command:
+``sudo usermod -aG docker $USER`` 
+
 ### Creating Raspberry Pi Container
 
 http://www.guoyiang.com/2016/11/04/Build-My-Own-Raspbian-Docker-Image/
