@@ -69,8 +69,39 @@ get all pods on all nodes
 
 ### docker
 
+- https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/
+
 Add the current user to the docker group to avoid needing sudo to run the docker command:
-``sudo usermod -aG docker $USER`` 
+``sudo usermod -aG docker $USER``
+
+relogin into user for group to take affect or `su - $USER`
+
+The problem with building images is that the Pi is ARMv7 (armhf) so we need to enable the experimental `buildx` for docker to build multi architecture containers
+https://github.com/docker/buildx
+
+``
+export DOCKER_CLI_EXPERIMENTAL=enabled
+export DOCKER_BUILDKIT=1
+docker build --platform=local -o . git://github.com/docker/buildx
+mkdir -p ~/.docker/cli-plugins
+mv buildx ~/.docker/cli-plugins/docker-buildx
+``
+
+``docker --help`` should confirm the new `buildx` command
+
+grab the latest QEMU (amd64 version)
+https://hub.docker.com/r/docker/binfmt/tags
+
+`docker pull docker/binfmt:a7996909642ee92942dcd6cff44b9b95f08dad64-amd64`
+
+this doesnt last a reboot?
+`docker run --rm --privileged docker/binfmt:a7996909642ee92942dcd6cff44b9b95f08dad64-amd64`
+
+check QEMU
+`cat /proc/sys/fs/binfmt_misc/qemu-aarch64`
+
+
+
 
 ### Creating Raspberry Pi Container
 
