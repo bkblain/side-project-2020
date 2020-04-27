@@ -11,14 +11,14 @@
 
 # Raspbian Installation
 
-- Install the Raspberry Pi Imager and create Raspbian microSD
-- Install the microSD and setup OS
-- Continue configuring the OS through the __Raspberry Pi Software Configuration Tool__
-- Run `sudo raspi-config` to open the config tool 
+1. Install the Raspberry Pi Imager and create Raspbian microSD
+2. Install the microSD and setup OS
+3. Continue configuring the OS through the __Raspberry Pi Software Configuration Tool__
+4. Run `sudo raspi-config` to open the config tool 
 
 ## Raspbian Lite Configuration
 
-- Configure the keyboard first. A bad keyboard layout can mess up other steps.
+1. Configure the keyboard first. A bad keyboard layout can mess up other steps.
   - Select _Localisation Options_
   - Select _Change Keyboard Layout_
   - Select _Generic 105-key PC_
@@ -29,37 +29,37 @@
   - Select _English (US)_
   - Select _The default for the keyboard layout_
   - Select _No compose key_
-- Select _Change User Password_ to change the default password
-- Select _Network Options_ to change the hostname
+2. Select _Change User Password_ to change the default password
+3. Select _Network Options_ to change the hostname
   - Select _Hostname_ and follow the instructions
-- Select _Network Options_ to connect to wifi
+4. Select _Network Options_ to connect to wifi
   - Select _Wi-fi_ and follow the instructions
-- Select _Interfacing Options_ to configure SSH
+5. Select _Interfacing Options_ to configure SSH
   - Select _SSH_ and follow the instructions
-- Exit the config tool
-- Run `ifconfig` to make sure that `wlan0` has received an IP address
+6. Exit the config tool
+7. Run `ifconfig` to make sure that `wlan0` has received an IP address
 
 ## Raspbian Desktop
 
-- Select _Change User Password_ to change the default password
-- Select _Network Options_ to change the hostname
+1. Select _Change User Password_ to change the default password
+2. Select _Network Options_ to change the hostname
   - Select _Hostname_ and follow the instructions
-- Select _Interfacing Options_ to configure SSH
+3. Select _Interfacing Options_ to configure SSH
   - Select _SSH_ and follow the instructions
-- Exit the config tool
-- Run `ifconfig` to make sure that `wlan0` has received an IP address
+4. Exit the config tool
+5. Run `ifconfig` to make sure that `wlan0` has received an IP address
 
 ## Configure Firewall
 
-- Run `sudo apt install ufw` to install __Uncomplicated Firewall__
-- Run `sudo ufw allow from 192.168.100.0/24 to any port 22` substitute the IP address with the domain ranges
-- Run `sudo ufw default deny incoming && sudo ufw default allow outgoing` to configure default rules
-- Run `sudo ufw enable` to enable the firewall
+1. Run `sudo apt install ufw` to install __Uncomplicated Firewall__
+2. Run `sudo ufw allow from 192.168.100.0/24 to any port 22` substitute the IP address with the domain ranges
+3. Run `sudo ufw default deny incoming && sudo ufw default allow outgoing` to configure default rules
+4. Run `sudo ufw enable` to enable the firewall
 
 ## Configure RTL-SDR
 
-- Run `sudo apt install rtl-sdr` to install RTL-SDR libraries
-- Run `sudo apt install sox` to install SoX which will stream audio
+1. Run `sudo apt install rtl-sdr` to install RTL-SDR libraries
+2. Run `sudo apt install sox` to install SoX which will stream audio
 
 
 This command will stream audio through the hdmi port
