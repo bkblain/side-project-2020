@@ -19,23 +19,23 @@
 ## Raspbian Lite Configuration
 
 1. Configure the keyboard first. A bad keyboard layout can mess up other steps.
-  - Select _Localisation Options_
-  - Select _Change Keyboard Layout_
-  - Select _Generic 105-key PC_
-  - If the keyboard list is showing non US layouts
-    - Select _Other_
+    - Select _Localisation Options_
+    - Select _Change Keyboard Layout_
+    - Select _Generic 105-key PC_
+    - If the keyboard list is showing non US layouts
+      - Select _Other_
+      - Select _English (US)_
+      - The layout list will reload with english layouts.
     - Select _English (US)_
-    - The layout list will reload with english layouts.
-  - Select _English (US)_
-  - Select _The default for the keyboard layout_
-  - Select _No compose key_
+    - Select _The default for the keyboard layout_
+    - Select _No compose key_
 2. Select _Change User Password_ to change the default password
 3. Select _Network Options_ to change the hostname
-  - Select _Hostname_ and follow the instructions
+    - Select _Hostname_ and follow the instructions
 4. Select _Network Options_ to connect to wifi
-  - Select _Wi-fi_ and follow the instructions
+    - Select _Wi-fi_ and follow the instructions
 5. Select _Interfacing Options_ to configure SSH
-  - Select _SSH_ and follow the instructions
+    - Select _SSH_ and follow the instructions
 6. Exit the config tool
 7. Run `ifconfig` to make sure that `wlan0` has received an IP address
 
@@ -43,9 +43,9 @@
 
 1. Select _Change User Password_ to change the default password
 2. Select _Network Options_ to change the hostname
-  - Select _Hostname_ and follow the instructions
+    - Select _Hostname_ and follow the instructions
 3. Select _Interfacing Options_ to configure SSH
-  - Select _SSH_ and follow the instructions
+    - Select _SSH_ and follow the instructions
 4. Exit the config tool
 5. Run `ifconfig` to make sure that `wlan0` has received an IP address
 
