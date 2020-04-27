@@ -1,18 +1,22 @@
 # side-project-2020
 
-useful links
-- https://gqrx.dk/doc/practical-tricks-and-tips
-- https://payatu.com/getting-started-radio-hacking-part-2-listening-fm-using-rtl-sdr-gqrx
-- https://www.nooelec.com/store/downloads/dl/file/id/72/product/0/nesdr_installation_manual_for_ubuntu.pdf
+## Recommended Hardware List
 
-## Raspbian Installation
+- Raspberry Pi 4 and case
+- Nooelec NESDR SMArt Bundle RTL-SDR
+- 32 GB microSD
+- keyboard and mouse
+- HDMI cable and display
+- USB memory card reader
+
+# Raspbian Installation
 
 - Install the Raspberry Pi Imager and create Raspbian microSD
 - Install the microSD and setup OS
 - Continue configuring the OS through the __Raspberry Pi Software Configuration Tool__
 - Run `sudo raspi-config` to open the config tool 
 
-### Raspbian Lite Configuration
+## Raspbian Lite Configuration
 
 - Configure the keyboard first. A bad keyboard layout can mess up other steps.
   - Select _Localisation Options_
@@ -35,7 +39,7 @@ useful links
 - Exit the config tool
 - Run `ifconfig` to make sure that `wlan0` has received an IP address
 
-### Raspbian Desktop
+## Raspbian Desktop
 
 - Select _Change User Password_ to change the default password
 - Select _Network Options_ to change the hostname
@@ -45,14 +49,14 @@ useful links
 - Exit the config tool
 - Run `ifconfig` to make sure that `wlan0` has received an IP address
 
-### Configure Firewall
+## Configure Firewall
 
 - Run `sudo apt install ufw` to install __Uncomplicated Firewall__
 - Run `sudo ufw allow from 192.168.100.0/24 to any port 22` substitute the IP address with the domain ranges
 - Run `sudo ufw default deny incoming && sudo ufw default allow outgoing` to configure default rules
 - Run `sudo ufw enable` to enable the firewall
 
-### Configure RTL-SDR
+## Configure RTL-SDR
 
 - Run `sudo apt install rtl-sdr` to install RTL-SDR libraries
 - Run `sudo apt install sox` to install SoX which will stream audio
@@ -159,3 +163,10 @@ http://www.guoyiang.com/2016/11/04/Build-My-Own-Raspbian-Docker-Image/
 This will create a tar that doesn't have a '.' directory in the beginning.
 ``sudo find /mnt/rpi/ -printf "%P\n" | sudo tar -C /mnt/rpi -czpf ~/Downloads/2020-02-13-raspbian-buster-lite.tar.gz --numeric-owner --no-recursion -T -``
 
+
+
+
+useful links
+- https://gqrx.dk/doc/practical-tricks-and-tips
+- https://payatu.com/getting-started-radio-hacking-part-2-listening-fm-using-rtl-sdr-gqrx
+- https://www.nooelec.com/store/downloads/dl/file/id/72/product/0/nesdr_installation_manual_for_ubuntu.pdf
