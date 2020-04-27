@@ -5,19 +5,61 @@ useful links
 - https://payatu.com/getting-started-radio-hacking-part-2-listening-fm-using-rtl-sdr-gqrx
 - https://www.nooelec.com/store/downloads/dl/file/id/72/product/0/nesdr_installation_manual_for_ubuntu.pdf
 
-## Steps
-1. Format SD Card
-2. Install the Raspberry Pi Imager and create Raspbian SD
-3. Put raspberry pi hardware together
-4. Install and setup OS
-5. Enable SSH via ``sudo raspi-config``
-6. Install rtl-sdr ``sudo apt install rtl-sdr``
-7. install sox
-8. ``sudo rtl_fm -g 50 -f 89.5M -M wbfm -s 256k | play -r 32k -es -t raw -b 16 -c 1 -| omxplayer -o hdmi -p``
+## Raspbian Installation
 
-TODO:
-- static IP?
-- TeamViewer for screen sharing
+- Install the Raspberry Pi Imager and create Raspbian microSD
+- Install the microSD and setup OS
+- Continue configuring the OS through the __Raspberry Pi Software Configuration Tool__
+- Run `sudo raspi-config` to open the config tool 
+
+### Raspbian Lite Configuration
+
+- Configure the keyboard first. A bad keyboard layout can mess up other steps.
+  - Select _Localisation Options_
+  - Select _Change Keyboard Layout_
+  - Select _Generic 105-key PC_
+  - If the keyboard list is showing non US layouts
+    - Select _Other_
+    - Select _English (US)_
+    - The layout list will reload with english layouts.
+  - Select _English (US)_
+  - Select _The default for the keyboard layout_
+  - Select _No compose key_
+- Select _Change User Password_ to change the default password
+- Select _Network Options_ to change the hostname
+  - Select _Hostname_ and follow the instructions
+- Select _Network Options_ to connect to wifi
+  - Select _Wi-fi_ and follow the instructions
+- Select _Interfacing Options_ to configure SSH
+  - Select _SSH_ and follow the instructions
+- Exit the config tool
+- Run `ifconfig` to make sure that `wlan0` has received an IP address
+
+### Raspbian Desktop
+
+- Select _Change User Password_ to change the default password
+- Select _Network Options_ to change the hostname
+  - Select _Hostname_ and follow the instructions
+- Select _Interfacing Options_ to configure SSH
+  - Select _SSH_ and follow the instructions
+- Exit the config tool
+- Run `ifconfig` to make sure that `wlan0` has received an IP address
+
+### Configure Firewall
+
+- Run `sudo apt install ufw` to install __Uncomplicated Firewall__
+- Run `sudo ufw allow from 192.168.100.0/24 to any port 22` substitute the IP address with the domain ranges
+- Run `sudo ufw default deny incoming && sudo ufw default allow outgoing` to configure default rules
+- Run `sudo ufw enable` to enable the firewall
+
+### Configure RTL-SDR
+
+- Run `sudo apt install rtl-sdr` to install RTL-SDR libraries
+- Run `sudo apt install sox` to install SoX which will stream audio
+
+
+This command will stream audio through the hdmi port
+``sudo rtl_fm -g 50 -f 89.5M -M wbfm -s 256k | play -r 32k -es -t raw -b 16 -c 1 -| omxplayer -o hdmi -p``
 
 
 ## Advanced
