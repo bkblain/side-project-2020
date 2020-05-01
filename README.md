@@ -66,15 +66,18 @@ This command will stream audio through the hdmi port
 ``sudo rtl_fm -g 50 -f 89.5M -M wbfm -s 256k | play -r 32k -es -t raw -b 16 -c 1 -| omxplayer -o hdmi -p``
 
 Install PIP for package management
+
 `sudo apt install python3-pip`
 
 install the python rtlsdr wrapper. this wraps the librtlsdr
+
 `pip3 install pyrtlsdr`
 
-
-https://pypi.org/project/pyrtlsdr/
-https://inst.eecs.berkeley.edu/~ee123/sp16/labs.html
-https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python
+- https://mode-s.org/decode/
+- https://www.allaboutcircuits.com/projects/track-overhead-flights-raspberry-pi-zero-w-software-defined-radio/
+- https://pypi.org/project/pyrtlsdr/
+- https://inst.eecs.berkeley.edu/~ee123/sp16/labs.html
+- https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python
 
 ## Advanced
 
