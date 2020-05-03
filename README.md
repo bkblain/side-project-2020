@@ -81,6 +81,13 @@ install the python rtlsdr wrapper. this wraps the librtlsdr
 
 ## Advanced
 
+Streaming links
+- https://pypi.org/project/pyrtlsdr/
+- https://docs.python.org/3/library/asyncio.html
+- https://pyrtlsdr.readthedocs.io/en/latest/Overview.html
+- https://pyrtlsdr.readthedocs.io/en/latest/rtlsdraio.html
+- https://realpython.com/async-io-python/
+
 Using k3s
 
 - https://github.com/teamserverless/k8s-on-raspbian/blob/master/GUIDE.md
