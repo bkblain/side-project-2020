@@ -69,6 +69,12 @@ Install PIP for package management
 
 `sudo apt install python3-pip`
 
+Don't install through pip, instead install pipenv which can be used to generate an environment for the project much like npm.
+
+`pip3 install pipenv`
+
+`pipenv install pyrtlsdr`
+
 install the python rtlsdr wrapper. this wraps the librtlsdr
 
 `pip3 install pyrtlsdr`
@@ -78,6 +84,7 @@ install the python rtlsdr wrapper. this wraps the librtlsdr
 - https://pypi.org/project/pyrtlsdr/
 - https://inst.eecs.berkeley.edu/~ee123/sp16/labs.html
 - https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python
+- https://github.com/itdaniher/rtlsdr-rds-demod
 
 ## Advanced
 
