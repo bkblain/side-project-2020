@@ -198,3 +198,7 @@ useful links
 - https://gqrx.dk/doc/practical-tricks-and-tips
 - https://payatu.com/getting-started-radio-hacking-part-2-listening-fm-using-rtl-sdr-gqrx
 - https://www.nooelec.com/store/downloads/dl/file/id/72/product/0/nesdr_installation_manual_for_ubuntu.pdf
+
+
+Install docker
+https://linuxconfig.org/how-to-install-docker-on-ubuntu-20-04-lts-focal-fossa
