@@ -55,6 +55,7 @@
 2. Run `sudo ufw allow from 192.168.100.0/24 to any port 22` substitute the IP address with the domain ranges
 3. Run `sudo ufw default deny incoming && sudo ufw default allow outgoing` to configure default rules
 4. Run `sudo ufw enable` to enable the firewall
+5. Run `sudo systemctl enable ufw` to start the service on boot
 
 ## Configure RTL-SDR
 
