@@ -13,3 +13,14 @@ Create a tuple of numbers 1-10. In a for loop, print out all numbers except thos
 ### Exercise 3:
 
 Create an array of strings (e.g. animals). Loop through each string then loop through and print each character of the string individually.
+
+### Exercise 4:
+
+Print out this menu.
+
+1. Option 1
+2. Option 2
+3. Option 3
+Input your selection:
+
+Print out a string based on the users selection.
