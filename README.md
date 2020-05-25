@@ -98,6 +98,9 @@ Streaming links
 
 Kubernetes
 
+- https://microk8s.io/#get-started
+- https://github.com/obsidiandynamics/kafdrop
+- https://github.com/kubernetes/dashboard
 - https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux
 
 Using k3s
