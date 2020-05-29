@@ -11,7 +11,7 @@
 
 # Raspbian Installation
 
-1. Install the Raspberry Pi Imager and create Raspbian microSD
+1. Install the [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and create Raspbian microSD
 2. Install the microSD and setup OS
 3. Continue configuring the OS through the __Raspberry Pi Software Configuration Tool__
 4. Run `sudo raspi-config` to open the config tool 
